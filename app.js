@@ -1,6 +1,4 @@
 function getRandomInteger(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
@@ -31,6 +29,11 @@ const app = Vue.createApp({
 
     heal() {
       this.attackCount++;
+
+      if (this.yourHealth + getRandomInteger(8, 15) >= 100) {
+        return (this.yourHealth = 100);
+      }
+
       this.yourHealth += getRandomInteger(8, 15);
       this.attackPlayer();
     },

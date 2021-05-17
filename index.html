@@ -20,13 +20,15 @@
       <section id="monster" class="container">
         <h2>Monster Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value">{{monsterHealth}}</div>
+          <div class="healthbar__value" :style="{width: monsterHealth + '%'}">
+            {{monsterHealth}}
+          </div>
         </div>
       </section>
       <section id="player" class="container">
         <h2>Your Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value">{{yourHealth}}</div>
+          <div class="healthbar__value" :style="{width: yourHealth + '%'}">{{yourHealth}}</div>
         </div>
       </section>
       <section id="controls">
