@@ -20,17 +20,13 @@
       <section id="monster" class="container">
         <h2>Monster Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value" :style="monsterHealthBarStyling">
-            {{monsterHealth}}
-          </div>
+          <div class="healthbar__value" :style="monsterHealthBarStyling"></div>
         </div>
       </section>
       <section id="player" class="container">
         <h2>Player Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value" :style="{width: playerHealth + '%'}">
-            {{playerHealth}}
-          </div>
+          <div class="healthbar__value" :style="playerHealthBarStyling"></div>
         </div>
       </section>
       <section id="controls" v-if="winner === null">
@@ -52,8 +48,8 @@
         <h2>Battle Log</h2>
         <ul>
           <li v-for="message in logMessages">
-            {{message.actionBy}} -
-            {{message.actionType}} - {{message.actionValue}}
+            {{message.actionBy}} - {{message.actionType}} -
+            {{message.actionValue}}
           </li>
         </ul>
       </section>
