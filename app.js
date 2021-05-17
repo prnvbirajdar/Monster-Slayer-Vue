@@ -37,6 +37,12 @@ const app = Vue.createApp({
       this.yourHealth += getRandomInteger(8, 15);
       this.attackPlayer();
     },
+
+    surrender() {
+      this.monsterHealth = 100;
+      this.yourHealth = 100;
+      this.attackCount = 0;
+    },
   },
 });
 
